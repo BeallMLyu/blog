@@ -1,0 +1,85 @@
+<title>推送</title>
+<script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.js"></script>
+
+<style>
+    body{
+        background: lightcyan;
+    }
+
+    /*标题*/
+    .push_title{
+        font-size: 50px;
+        color: #006dcc;
+        position: absolute;
+        top: 2px;
+        left: 55%;
+    }
+
+    /*推送列表*/
+    .push_top{
+        position: absolute;
+        left: 530px;
+        top: 100px;
+    }
+    .push_style{
+        width: 1350px;
+        height: 40px;
+    }
+    .title{
+        color: #006dcc;
+        font-size: 40px;
+        position: absolute;
+        left: 450px;
+        line-height: 35px;
+        margin: 5px 0;
+    }
+    .update_time{
+        font-size: 25px;
+        line-height: 40px;
+        position: absolute;
+        left: 60px;
+        margin: 5px 0;
+    }
+    .round{
+        background: #006dcc;
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        border: 3px solid silver;
+        position: absolute;
+        left: 380px;
+        margin: 15px 0;
+    }
+    .before{
+        width: 5px;
+        height: 85px;
+        left: 5px;
+        top: 17px;
+        background: silver;
+        position: absolute;
+    }
+</style>
+
+<!--侧面菜单-->
+<include file="./Application/Home/View/Public/header.html" />
+<include file="./Application/Home/View/Public/menu.html" />
+
+<div class="push_title">文章推送</div>
+<div class="push_top">
+    <foreach name="push" item="item">
+        <div class="update_time">{$item['update_time']}</div>
+        <div class="round">
+            <div class="before"></div>
+        </div>
+        <div class="push_style">
+            <div class="title">
+                <a href="/Home/Index/content?id={$item['blog_id']}">{$item['title']}</a>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+    </foreach>
+</div>
+
+<include file="./Application/Home/View/Public/footer.html" />

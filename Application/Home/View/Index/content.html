@@ -1,0 +1,232 @@
+<title>{$blog['title']}</title>
+    <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.js"></script>
+    <style type="text/css">
+        body{
+            background: whitesmoke;
+        }
+
+        /*文章标题和内容*/
+        .title{
+            background: whitesmoke;
+            width: 1350px;
+            height: 150px;
+            text-align: center;
+            font-size: 40px;
+            line-height: 130px;
+            position: absolute;
+            left: 530px;
+            top: 0;
+            border: 2px solid black;
+        }
+        .content{
+            background: whitesmoke;
+            width: 1350px;
+            height: auto;
+            position: absolute;
+            left: 530px;
+            top: 162.5px;
+            font-size: 25px;
+            border: 2px solid black;
+        }
+
+        /*评论添加框*/
+        .article_add{
+            width: 1399px;
+            background: transparent;
+            height: 300px;
+            position: relative;
+            left: 490px;
+            top: auto;
+            line-height: 50px;
+            margin: auto 0;
+            border: 2px solid black;
+        }
+        .detail{
+            width:1350px;
+            height:175px;
+            position: absolute;
+            left: 30px;
+            top: 18px;
+            font-size: 30px;
+            padding-left: 5px;
+        }
+
+        .submit{
+            background: #009688;
+            position: absolute;
+            left: 550px;
+            top: 225px;
+            color: white;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 5px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        /*评论(表格)*/
+        /*.table{*/
+            /*position: absolute;*/
+            /*left: 530px;*/
+            /*top: 75%;*/
+        /*}*/
+        /*table th, table td{*/
+            /*width: 670px;*/
+            /*height: 80px;*/
+            /*font-size: 25px;*/
+        /*}*/
+
+        .comment_top{
+            position: absolute;
+            top: 1560px;
+            left: 530px;
+        }
+        .comment_class{
+            width: 1350px;
+            height: 150px;
+            word-wrap: break-word;
+            white-space : normal;
+            /*border: 2px solid black;*/
+        }
+
+        textarea{
+            resize:none;
+            border: none;
+        }
+
+        pre{
+            white-space:pre-wrap;
+            word-wrap:break-word;
+        }
+
+        /*翻页*/
+        .page_type{
+            background: #333333;
+            float: left;
+            margin: 0 40px;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 5px;
+            font-size: 25px;
+        }
+        .page_top{
+            position: absolute;
+            left: 39%;
+            top: 1490px;
+            /*border: 2px solid black;*/
+        }
+        .page_top2{
+            position: absolute;
+            left: 39%;
+            top: 2040px;
+            /*border: 2px solid black;*/
+        }
+
+        /*链接色*/
+        a:link {
+            color:white;
+            text-decoration:none;
+        }
+        /*事后链接*/
+        a:visited {
+            color:white;
+            text-decoration:none;
+        }
+        /*鼠标悬浮链接*/
+        a:hover {
+            color:white;
+            text-decoration:none;
+        }
+        /*点击色*/
+        a:active {
+            color:white;
+            text-decoration:none;
+        }
+    </style>
+
+<!--侧面菜单-->
+<include file="./Application/Home/View/Public/header.html" />
+<include file="./Application/Home/View/Public/menu.html" />
+
+<div class="title">{$blog['title']}</div>
+<div class="content">
+    <pre>{$blog['content']}</pre>
+</div>
+<div class="page_top">
+    <div class="page_type">
+        <a href="/Home/Index/content?id={$blog['id']}&page=1" style="color: white"><<</a>
+    </div>
+    <div class="page_type">
+        <a href="/Home/Index/content?id={$blog['id']}&page=<?php if($nowPage - 1 < 1) echo 1;else echo $nowPage - 1;?>" style="color: white"><</a>
+    </div>
+    <!--<for start="0" end="$total_page" step="1" name="page">-->
+        <!--<div class="page_type">-->
+            <!--<a href="/Home/Index/content?id={$blog['id']}&page={$page + 1}">{$page + 1}</a>-->
+        <!--</div>-->
+    <!--</for>-->
+    <div class="page_type">
+        <a href="/Home/Index/content?id={$blog['id']}&page=<?php if($nowPage + 1 > $total_page) echo $total_page;else echo $nowPage + 1;?>" style="color: white">></a>
+    </div>
+    <div class="page_type">
+        <a href="/Home/Index/content?id={$blog['id']}&page={$total_page}" style="color: white">>></a>
+    </div>
+</div>
+
+<div class="article_add">
+    <input type="hidden" class="blog_id" data-id="{$blog['id']}">
+    <textarea id="detail" class="detail" name="detail" placeholder="评论添加"></textarea>
+    <div id="submit" type="button" class="submit">submit</div>
+</div>
+<!--<div style="width: 1300px;height: 1px;background: gray;position: absolute;left: 549px;top: 1560px"></div>-->
+<div class="comment_top">
+    <foreach name="comment" item="item">
+        <div class="comment_class">
+            <div style="width: 1300px;height: 1px;background: gray;position: absolute;left: 20px;"></div>
+            <div style="font-size: 35px;line-height: 60px;position: absolute;left: 20px">{$item['detail']}</div>
+            <div style="font-size: 20px;line-height: 225px;position: absolute;left: 20px">{$item['create_time']}</div>
+            <div style="width: 1300px;height: 1px;background: gray;position: absolute;left: 20px;margin: 150px 0;"></div>
+        </div>
+    </foreach>
+</div>
+<!--<div class="page_top2">-->
+    <!--<div class="page_type">-->
+        <!--<a href="/Home/Index/content?id={$blog['id']}&page=1" style="color: white"><<</a>-->
+    <!--</div>-->
+    <!--<div class="page_type">-->
+        <!--<a href="/Home/Index/content?id={$blog['id']}&page=<?php if($nowPage - 1 < 1) echo 1;else echo $nowPage - 1;?>" style="color: white"><</a>-->
+    <!--</div>-->
+    <!--<div class="page_type">-->
+        <!--<a href="/Home/Index/content?id={$blog['id']}&page=<?php if($nowPage + 1 > $total_page) echo $total_page;else echo $nowPage + 1;?>" style="color: white">></a>-->
+    <!--</div>-->
+    <!--<div class="page_type">-->
+        <!--<a href="/Home/Index/content?id={$blog['id']}&page={$total_page}" style="color: white">>></a>-->
+    <!--</div>-->
+<!--</div>-->
+<script>
+    $("#submit").mouseover(function () {
+        $("#submit").css({"background":"#058ee1"})
+    })
+    $("#submit").mouseout(function () {
+        $("#submit").css({"background":"#009688"})
+    })
+    
+    
+    $("#submit").click(function () {
+        var blog_id = $(".blog_id").attr("data-id")
+        $.post("/Home/Index/doAdd", {
+            detail:$("#detail").val(),
+            blog_id:blog_id
+        }, function (result) {
+            console.log(result)
+            alert(result.message)
+            if (result.status == 1) {
+                window.location.reload()
+            }
+        })
+    })
+</script>
+<include file="./Application/Home/View/Public/footer.html" />

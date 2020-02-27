@@ -1,0 +1,271 @@
+[ 2020-01-23T17:30:35+08:00 ] 127.0.0.1 /Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.057052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.138953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.139060s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0741s ]
+NOTIC: [8] Undefined index: cate_id D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SELECT blog.id,blog.cate_id,category.cate_name,blog.title,blog.content,blog.click_count,blog.create_time,blog.update_time FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 0,5   [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0387s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006200s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 107 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 131 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 134 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 137 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 137 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 140 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.413726s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.413787s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.043876s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.043936s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.038587s ]
+INFO: [ app_end ] --END-- [ RunTime:0.038660s ]
+
+[ 2020-01-23T17:47:45+08:00 ] 127.0.0.1 /Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001203s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0644s ]
+NOTIC: [8] Undefined index: cate_id D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SELECT blog.id,blog.cate_id,category.cate_name,blog.title,blog.content,blog.click_count,blog.create_time,blog.update_time FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 0,5   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0286s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 132 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 135 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.110368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110478s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002747s ]
+
+[ 2020-01-23T17:47:56+08:00 ] 127.0.0.1 /Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001098s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0345s ]
+NOTIC: [8] Undefined index: cate_id D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SELECT blog.id,blog.cate_id,category.cate_name,blog.title,blog.content,blog.click_count,blog.create_time,blog.update_time FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 0,5   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 132 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 135 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001576s ]
+
+[ 2020-01-23T17:48:16+08:00 ] 127.0.0.1 /Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0358s ]
+NOTIC: [8] Undefined index: cate_id D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SELECT blog.id,blog.cate_id,category.cate_name,blog.title,blog.content,blog.click_count,blog.create_time,blog.update_time FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 0,5   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0311s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 132 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 135 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089163s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000939s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2020-01-23T17:48:31+08:00 ] 127.0.0.1 /Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0381s ]
+NOTIC: [8] Undefined index: cate_id D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SELECT blog.id,blog.cate_id,category.cate_name,blog.title,blog.content,blog.click_count,blog.create_time,blog.update_time FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 0,5   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0295s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 109 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 133 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 136 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 142 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 145 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2020-01-23T17:48:45+08:00 ] 127.0.0.1 /Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0391s ]
+NOTIC: [8] Undefined index: cate_id D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SELECT blog.id,blog.cate_id,category.cate_name,blog.title,blog.content,blog.click_count,blog.create_time,blog.update_time FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 0,5   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0265s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 109 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 133 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 136 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 139 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 142 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 145 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076427s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076487s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001108s ]
+
+[ 2020-01-23T17:48:55+08:00 ] 127.0.0.1 /Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001234s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: cate_id D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 12 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 13 行.
+SQL: SELECT blog.id,blog.cate_id,category.cate_name,blog.title,blog.content,blog.click_count,blog.create_time,blog.update_time FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 0,5   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.delete_time is null AND blog.status = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0285s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 132 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 135 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001171s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001233s ]
+
+[ 2020-01-23T17:48:56+08:00 ] 127.0.0.1 /Home/index/content?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001045s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0353s ]
+SQL: SELECT * FROM `blog` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0286s ]
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Home\Controller\IndexController.class.php 第 66 行.
+SQL: SELECT * FROM `comment` WHERE `blog_id` = 5 AND `delete_time` is null AND `examine_status` = 1 LIMIT 0,3   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `blog_id` = 5 AND `delete_time` is null AND `examine_status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.012285s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012370s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.126191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.126269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000934s ]
+

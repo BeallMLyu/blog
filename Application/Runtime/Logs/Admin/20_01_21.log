@@ -1,0 +1,369 @@
+[ 2020-01-21T01:12:39+08:00 ] 127.0.0.1 /Admin/Login/log_out
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028194s ]
+
+[ 2020-01-21T01:12:39+08:00 ] 127.0.0.1 /index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.202402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.202472s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.025894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.026003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019274s ]
+INFO: [ app_end ] --END-- [ RunTime:0.019333s ]
+
+[ 2020-01-21T19:05:54+08:00 ] 127.0.0.1 /Admin/Article/datalist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001517s ]
+
+[ 2020-01-21T19:05:54+08:00 ] 127.0.0.1 /index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000939s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077467s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001314s ]
+
+[ 2020-01-21T19:06:02+08:00 ] 127.0.0.1 /Admin/login/doLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0326s ]
+SQL: SELECT * FROM `users` WHERE `username` = 'meitounao' LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `users` SET `last_login_time`='2020-01-21 19:06:02',`update_time`='2020-01-21 19:06:02',`last_login_ip`='127.0.0.1' WHERE `username` = 'meitounao' [ RunTime:0.0429s ]
+
+[ 2020-01-21T19:06:03+08:00 ] 127.0.0.1 /Admin/Account/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000950s ]
+SQL: SHOW COLUMNS FROM `system_info` [ RunTime:0.0362s ]
+SQL: SELECT * FROM `system_info` WHERE ( id > 0 ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.120576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.120663s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001023s ]
+
+[ 2020-01-21T19:06:08+08:00 ] 127.0.0.1 /Admin/Article/datalist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0396s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 16 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 17 行.
+NOTIC: [8] Undefined index: page_row D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 21 行.
+SQL: SELECT blog.id,blog.title,blog.status,blog.click_count,blog.push_time,blog.create_time,blog.update_time,blog.cate_id,category.cate_name FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE ( blog.delete_time is null ) LIMIT 0,3   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE ( blog.delete_time is null ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 201 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 243 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 246 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 252 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 255 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 257 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 258 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.168006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.168064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001066s ]
+
+[ 2020-01-21T23:41:32+08:00 ] 127.0.0.1 /Admin/Article/datalist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0344s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 16 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 17 行.
+NOTIC: [8] Undefined index: page_row D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 21 行.
+SQL: SELECT blog.id,blog.title,blog.status,blog.click_count,blog.push_time,blog.create_time,blog.update_time,blog.cate_id,category.cate_name FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE ( blog.delete_time is null ) LIMIT 0,3   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE ( blog.delete_time is null ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 201 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 243 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 246 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 252 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 255 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 257 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 258 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.139036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.139103s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001207s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001313s ]
+
+[ 2020-01-21T23:41:34+08:00 ] 127.0.0.1 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0335s ]
+SQL: SELECT * FROM `category` WHERE ( id > 0 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.121255s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.121328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2020-01-21T23:41:37+08:00 ] 127.0.0.1 /Admin/Article/update.html?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0357s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0257s ]
+SQL: SELECT blog.id,blog.content,blog.title,blog.status,blog.cate_id FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE blog.id = '7' AND blog.delete_time is null LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `category` WHERE ( id > 0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.128124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.128206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2020-01-21T23:41:41+08:00 ] 127.0.0.1 /Admin/Comment/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0356s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Admin\Controller\CommentController.class.php 第 14 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Admin\Controller\CommentController.class.php 第 15 行.
+SQL: SELECT comment.id,comment.blog_id,blog.title,comment.detail,comment.examine_status,comment.create_time,comment.update_time,comment.delete_time FROM `comment` LEFT JOIN blog on comment.blog_id = blog.id  WHERE ( comment.delete_time is null ) LIMIT 0,4   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` LEFT JOIN blog on comment.blog_id = blog.id  WHERE ( comment.delete_time is null ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 181 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 214 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 217 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 220 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 220 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 220 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 220 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 223 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\9422665904e471006147a1d12ed26ddc.php 第 226 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.185476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.185579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000882s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003140s ]
+
+[ 2020-01-21T23:41:44+08:00 ] 127.0.0.1 /Admin/Comment/update.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0356s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0275s ]
+SQL: SELECT comment.id,comment.blog_id,comment.detail,comment.examine_status FROM `comment` LEFT JOIN blog on comment.blog_id = blog.id  WHERE comment.id = '1' AND comment.delete_time is null LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `blog` WHERE ( id > 0 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109111s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2020-01-21T23:41:47+08:00 ] 127.0.0.1 /Admin/Push/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `push` [ RunTime:0.0399s ]
+SQL: SELECT push.id,push.blog_id,blog.title,push.create_time,push.update_time,push.delete_time,push.sort FROM `push` LEFT JOIN blog on push.blog_id = blog.id  WHERE ( push.delete_time is null ) ORDER BY `sort` DESC  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001517s ]
+
+[ 2020-01-21T23:41:50+08:00 ] 127.0.0.1 /Admin/Push/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0341s ]
+SQL: SELECT * FROM `blog` WHERE ( delete_time is null )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086131s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2020-01-21T23:42:04+08:00 ] 127.0.0.1 /Admin/Push/update?id=13
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `push` [ RunTime:0.0344s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0260s ]
+SQL: SELECT push.id,push.blog_id,blog.title,push.create_time,push.update_time,push.delete_time,push.sort FROM `push` LEFT JOIN blog on push.blog_id = blog.id  WHERE push.id = '13' AND push.delete_time is null LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blog` WHERE ( delete_time is null )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+
+[ 2020-01-21T23:43:06+08:00 ] 127.0.0.1 /Admin/Article/datalist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `blog` [ RunTime:0.0364s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 16 行.
+NOTIC: [8] Undefined index: page D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 17 行.
+NOTIC: [8] Undefined index: page_row D:\phpStudy\WWW\blog\Application\Admin\Controller\ArticleController.class.php 第 21 行.
+SQL: SELECT blog.id,blog.title,blog.status,blog.click_count,blog.push_time,blog.create_time,blog.update_time,blog.cate_id,category.cate_name FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE ( blog.delete_time is null ) LIMIT 0,3   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog` LEFT JOIN category on blog.cate_id = category.id  WHERE ( blog.delete_time is null ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 201 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 243 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 246 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 249 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 252 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 255 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 257 行.
+NOTIC: [8] Undefined variable: title D:\phpStudy\WWW\blog\Application\Runtime\Cache\Admin\bba1bce1adf58c2c9651a833718013a7.php 第 258 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104247s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001653s ]
+

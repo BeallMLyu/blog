@@ -1,0 +1,84 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+        body{
+            background:url(/Public/admin/admin_background.png)  no-repeat center center;
+            background-size:cover;
+            background-attachment:fixed;
+            background-color:#CCCCCC;
+        }
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            color: black;
+        }
+        .login_class{
+            background: rgba(0,0,0,0.5);
+            /*opacity: 0.5;*/
+            border: 2px white solid;
+            padding: 20px 70px 40px 70px;
+            border-radius: 10px;
+            width: 240px;
+            margin: 15% auto;
+        }
+        .login_text_class{
+            top: 80px;
+            left: 20px;
+            margin: 0 auto;
+        }
+        .login_text_class input{
+            display: inline-block;
+            vertical-align: middle;
+            background: white;
+            border: black solid 1px;
+            width: 220px;
+            padding: 0 10px;
+            height: 34px;
+            line-height: 34px;
+            font-size: 16px;
+            color: black;
+            border-radius: 3px;
+            margin: 20px 0;
+        }
+        .submit{
+            background:#009688;
+            width: 220px;
+            height: 36px;
+            color: black;
+            line-height: 36px;
+            font-size: 16px;
+            text-shadow: 1px 1px 0 #444;
+            margin: 15px 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<!--登录模块-->
+<div class="login_class">
+    <div class = login_text_class>
+        <input id="loginUsername" name="username" type="text" placeholder="username">
+        <input id="loginPassword" name="pwd" type="password" placeholder="pwd">
+    </div>
+    <input id="submit" class = submit type="submit" value="登录">
+</div>
+</body>
+<script>
+        $("#submit").click(function () {
+            $.post("/Admin/login/doLogin",{
+                username:$("#loginUsername").val(),
+                password:$("#loginPassword").val()
+            }, function (result) {
+                console.log(result)
+                alert(result.message)
+                if (result.status == 1) {
+                    window.location.href = "/Admin/Account/index"
+                }
+            }, "json")
+        })
+    </script>
+</html>

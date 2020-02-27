@@ -1,0 +1,174 @@
+<title>评论管理</title>
+    <style>
+        /*文章列表*/
+        .table{
+            background-color: #fff;
+            width: 1660px;
+            height: 170px;
+            /*margin: auto;*/
+            position: absolute;
+            top: 40%;
+            left: 235px;
+            right: 0;
+        }
+        table th, table td{
+            top: 100px;
+            padding: 5px 40px;
+            text-align: center;
+            border: 1px solid silver;
+        }
+        table th{
+            background: #999999;
+        }
+
+        /*功能*/
+        .search{
+            position: absolute;
+            top: 32.5%;
+            left: 57.5%;
+            right: 0;
+            text-align: center;
+            padding: 4px 8px;
+            font-size: 20px;
+            height: 40px;
+            width: 70px;
+            line-height: 40px;
+            border-radius: 4px;
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #006dcc;
+            float: left;
+            margin: 0;
+            cursor:pointer
+        }
+        #search{
+            border-radius: 5px;
+            width: 250px;
+            height: 50px;
+            position: absolute;
+            top: 32.5%;
+            left: 43%;
+            right: 370px;
+            float: left;
+            border: 1px solid #c0c0c0;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .delete{
+            background: #009688;
+            float: right;
+            color: white;
+            border-radius: 5px;
+            width: 90px
+        }
+        .update{
+            background: #009688;
+            float: left;
+            color: white;
+            border-radius: 5px;
+            width: 90px
+        }
+
+        /*翻页*/
+        .page_class{
+            background: black;
+            position: relative;
+            top: 57%;
+            left: 30%;
+            width: 1800px;
+            height: 0;
+        }
+        .page_class_btn{
+            float:left;
+            border: 1px;
+            border-radius: 15px;
+            width: 50px;
+            height: 50px;
+            background: #232323;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            margin: 1.5%;
+        }
+
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.js"></script>
+<!--侧面菜单-->
+<include file="./Application/Admin/View/Public/header.html" />
+<include file="./Application/Admin/View/Public/menu.html" />
+
+
+<div class="action">
+    <input id="search" type="text" placeholder="search by detail" value="<?php if($title) echo $title;?>">
+    <div id="submit" class="search">search</div>
+</div>
+    <table class="table">
+        <tr class="tr_title">
+            <th>评论所指的文章标题</th>
+            <th>评论全文</th>
+            <th>审核状态</th>
+            <th>创建时间</th>
+            <th>更新时间</th>
+            <th>编辑文章</th>
+        </tr>
+        <foreach name="search" item="item">
+            <tr>
+                <td>
+                    <a href="/Admin/Article/update?id={$item['blog_id']}" style="color: black">
+                        {$item['title']}
+                    </a>
+                </td>
+                <td>{$item['detail']}</td>
+                <td>
+                    <if condition="($item['examine_status'] eq 0)">未审核
+                        <else />已审核
+                    </if>
+                </td>
+                <td>{$item['create_time']}</td>
+                <td>{$item['update_time']}</td>
+                <td>
+                    <a class="update" href="/Admin/Comment/update.html?id={$item['id']}">修改评论</a>
+                    <div class="delete" data-id="{$item['id']}">删除评论</div>
+                </td>
+            </tr>
+        </foreach>
+    </table>
+    <div class="page_class">
+        <div class="page_class_btn">
+            <a href="/Admin/Comment/index?<?php if($title) echo "title=".$title.'&';?>page=1"><<</a>
+        </div>
+        <div class="page_class_btn" >
+            <a href="/Admin/Comment/index?<?php if($title) echo "title=".$title.'&';?>page=<?php if($nowPage - 1 < 1) echo 1;else echo $nowPage - 1;?>"><</a>
+        </div>
+        <for start="0" end="$total_page" step="1" name="page">
+            <div class="page_class_btn">
+                <a href="/Admin/Comment/index?<?php if($title) echo "title=".$title.'&';?>page={$page + 1}">{$page + 1}</a>
+            </div>
+        </for>
+        <div class="page_class_btn">
+            <a href="/Admin/Comment/index?<?php if($title) echo "title=".$title.'&';?>page=<?php if($nowPage + 1 > $total_page) echo $total_page;else echo $nowPage + 1;?>">></a>
+        </div>
+        <div class="page_class_btn">
+            <a href="/Admin/Comment/index?<?php if($title) echo "title=".$title.'&';?>page={$total_page}">>></a>
+        </div>
+    </div>
+    <include file="./Application/Admin/View/Public/footer.html" />
+<script>
+    $(".delete").click(function () {
+        var id = $(this).attr("data-id");
+        $.post("/Admin/Comment/doDelete", {
+            id:id
+        }, function (result) {
+            console.log(result)
+            alert(result.message)
+            if (result.status == 1) {
+                window.location.href = "/Admin/Comment/index"
+            }
+        }, "json")
+    })
+
+    $("#submit").click(function () {
+        var title = $("#search").val()
+        window.location.href = "/Admin/Comment/index?title=" + title
+    })
+</script>

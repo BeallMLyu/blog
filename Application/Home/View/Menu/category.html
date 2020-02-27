@@ -1,0 +1,39 @@
+<title>类别</title>
+<script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.js"></script>
+
+<!--侧面菜单-->
+<include file="./Application/Home/View/Public/header.html" />
+<include file="./Application/Home/View/Public/menu.html" />
+
+<style>
+    body{
+        background: lightcyan;
+    }
+
+    .cate_top{
+        position: absolute;
+        left: 525px
+    }
+    .cate_name{
+        width: 1300px;
+        font-size: 35px;
+        margin: 10px 0;
+        color: #006dcc;
+    }
+</style>
+
+<div class="cate_top">
+    <div style="font-size: 50px;color: #009688">类别</div>
+    <!--<foreach name="cate" item="item">-->
+        <!--<div class="cate_name">-->
+            <!--<a href="/Home/Index/index?cate_id={$item['id']}">{$item['cate_name']}</a>-->
+        <!--</div>-->
+    <!--</foreach>-->
+    <volist name="cate" id="vo">
+        <div class="cate_name">
+            <a href="/Home/Index/index?cate_id={$vo['id']}">{$vo['cate_name']}</a> {$vo['count']}
+        </div>
+    </volist>
+</div>
+
+<include file="./Application/Home/View/Public/footer.html" />

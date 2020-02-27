@@ -1,0 +1,117 @@
+<style>
+    .list{
+        background-color: #333333;
+        float: left;
+        height: 586.5px;
+        position: fixed;
+        left: 0;
+        top: 350px;
+    }
+    .list_menu{
+        background: grey;
+        font-size: 20px;
+        width: 500px;
+        padding: 0;
+        line-height: 45px;
+        position: relative;
+    }
+    .list_menu-item{
+        height: 50px;
+        text-align: center;
+        position: relative;
+    }
+    /*链接色*/
+    a:link {
+        color:cornflowerblue;
+        text-decoration:none;
+    }
+    /*事后链接*/
+    a:visited {
+        color:cornflowerblue;
+        text-decoration:none;
+    }
+    /*鼠标悬浮链接*/
+    a:hover {
+        color:green;
+        text-decoration:none;
+    }
+    /*点击色*/
+    a:active {
+        color:green;
+        text-decoration:none;
+    }
+
+    ul li{
+        -webkit-transition: background 0.5s,padding-left 0.25s;
+    }
+</style>
+<div>
+    <div class="list">
+        <ul class="list_menu">
+            <li class="list_menu-item" id="home">
+                <a class="homeAnime" href="/Home/Index/index" style="color: whitesmoke;position: relative;cursor: default">
+                    <div>
+                        首页
+                    </div>
+                </a>
+            </li>
+            <li class="list_menu-item" id="category">
+                <a class="cateAnime" href="/Home/Menu/category" style="color: whitesmoke;position: relative;cursor: default">
+                    <div>
+                        分类
+                    </div>
+                </a>
+            </li>
+            <li class="list_menu-item" id="push">
+                <a class="pushAnime" href="/Home/Menu/push" style="color: whitesmoke;position: relative;cursor: default">
+                    <div>
+                        推送
+                    </div>
+                </a>
+            </li>
+            <li class="list_menu-item" id="about">
+                <a class="aboutAnime" href="/Home/Menu/about" style="color: whitesmoke;position: relative;cursor: default">
+                    <div>
+                        关于
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $("#home").mouseover(function () {
+        $("#home").css({"background":"#999999"})
+        $(".homeAnime").stop().animate({"font-size":"25px"},100)
+    })
+    $("#home").mouseout(function () {
+        $("#home").css({"background":"grey"})
+        $(".homeAnime").stop().animate({"font-size":"20px"},100)
+    })
+
+    $("#push").mouseover(function () {
+        $("#push").css({"background":"#999999"})
+        $(".pushAnime").stop().animate({"font-size":"25px"},100)
+    })
+    $("#push").mouseout(function () {
+        $("#push").css({"background":"grey"})
+        $(".pushAnime").stop().animate({"font-size":"20px"},100)
+    })
+    $("#category").mouseover(function () {
+        $("#category").css({"background":"#999999"})
+        $(".cateAnime").stop().animate({"font-size":"25px"},100)
+    })
+    $("#category").mouseout(function () {
+        $("#category").css({"background":"grey"})
+        $(".cateAnime").stop().animate({"font-size":"20px"},100)
+    })
+
+    $("#about").mouseover(function () {
+        $("#about").css({"background":"#999999"})
+        $(".aboutAnime").stop().animate({"font-size":"25px"},100)
+    })
+    $("#about").mouseout(function () {
+        $("#about").css({"background":"grey"})
+        $(".aboutAnime").stop().animate({"font-size":"20px"},100)
+    })
+</script>

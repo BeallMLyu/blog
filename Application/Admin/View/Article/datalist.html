@@ -1,0 +1,221 @@
+<title>文章列表</title>
+    <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.js"></script>
+    <style>
+        body{
+            background: whitesmoke;
+        }
+
+        /*功能*/
+        .search_class{
+            text-align: center; /*让div内部文字居中*/
+            width: 520px;
+            position: absolute;
+            top: 250px;
+            left: 40%;
+            right: 0;
+        }
+        #search{
+            float: left;
+            border: 1px solid #c0c0c0;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 1em;
+            margin: 2px 10px;
+        }
+        .submit{
+            text-align: center;
+            padding: 4px 8px;
+            font-size: 20px;
+            height: 35px;
+            width: 70px;
+            line-height: 30px;
+            border-radius: 4px;
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #006dcc;
+            float: left;
+            margin: 0;
+            cursor:pointer
+        }
+        #article_add{
+            text-align: center;
+            padding: 4px 8px;
+            font-size: 17px;
+            height: 35px;
+            width: 70px;
+            line-height: 30px;
+            border-radius: 4px;
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #006dcc;
+            float: left;
+            margin: 0 10px;
+            cursor:pointer
+        }
+        #location_datalist{
+            text-align: center;
+            padding: 4px 8px;
+            font-size: 17px;
+            height: 35px;
+            width: 70px;
+            line-height: 30px;
+            border-radius: 4px;
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #006dcc;
+            float: left;
+            cursor:pointer
+        }
+
+        /*文章列表*/
+        table th, table td{
+            padding: 5px 35px;
+            text-align: center;
+            border: 1px solid silver;
+        }
+        table th{
+            background: #999999;
+        }
+        .datalist{
+            text-align: center; /*让div内部文字居中*/
+            background-color: #fff;
+            width: 1660px;
+            height: 170px;
+            position: absolute;
+            top: 350px;
+            left: 230px;
+            right: 0;
+            bottom: 0;
+        }
+
+        /*翻页*/
+        .page_class{
+            width: 810px;
+            height: 65px;
+            position: absolute;
+            top: 60%;
+            left: 31%;
+            right: 0;
+            bottom: 0;
+        }
+        .page_turn{
+            float:left;
+            margin: 20px;
+            border: 1px;
+            border-radius: 15px;
+            width: 50px;
+            height: 50px;
+            background: #232323;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+        }
+
+    </style>
+
+<!--侧面菜单-->
+<include file="./Application/Admin/View/Public/header.html" />
+<include file="./Application/Admin/View/Public/menu.html" />
+
+<!--功能-->
+<div class="search_class">
+    <input id="search" type="text" placeholder="search in index" value="<?php if($title) echo $title;?>">
+    <div id="submit" class="submit">submit</div>
+    <div id="article_add">添加文章</div>
+    <div id="location_datalist">回到首页</div>
+</div>
+
+<!--文章列表-->
+<table class="datalist">
+    <tr class="table_title">
+        <th>标题</th>
+        <th>状态</th>
+        <th>点击数</th>
+        <th>类别名字</th>
+        <th>推送时间</th>
+        <th>创建时间</th>
+        <th>上传时间</th>
+        <th>编辑文章</th>
+    </tr>
+    <foreach name="blog" item="item">
+        <tr>
+            <td>{$item['title']}</td>
+            <td>
+                <if condition="($item['status'] eq 0)">未审核
+                    <else />已审核
+                </if>
+            </td>
+            <td>{$item['click_count']}</td>
+            <td>{$item['cate_name']}</td>
+            <td>
+                <if condition="($item['push_time'] eq null)">未推送
+                    <else />{$item['push_time']}
+                </if>
+            </td>
+            <td>{$item['create_time']}</td>
+            <td>{$item['update_time']}</td>
+            <td>
+                <div id="update" style="border: 1px solid #999999;border-radius:2px;float: left;background: #009688;color: whitesmoke;cursor:pointer;width: 100px;">
+                    <a href ="/Admin/Article/update.html?id={$item['id']}">点击修改</a>
+                </div>
+                <div class="delete" data-id="{$item['id']}" style="border: 1px solid #999999;border-radius:2px;float: right;background: #009688;color: whitesmoke;cursor:pointer;width: 100px;">点击删除</div>
+            </td>
+        </tr>
+    </foreach>
+</table>
+
+<!--翻页-->
+<div class="page_class">
+    <div class="page_turn" id="last_top">
+        <a href="/Admin/Article/datalist?<?php if($title) echo "title=".$title.'&';?>page=1&page_row={$page_row}"><<</a>
+    </div>
+    <div class="page_turn" id="last">
+        <a href="/Admin/Article/datalist?<?php if($title) echo "title=".$title.'&';?>page=<?php if($nowPage - 1 < 1) echo 1;else echo $nowPage - 1;?>&page_row={$page_row}"><<</a>
+    </div>
+    <!--<for class="page_turn" start="0" end="$total_page" step="1" name="page">-->
+        <!--<div class="page_turn" id="number">-->
+            <!--<a href="/Admin/Article/datalist?<?php if($title) echo "title=".$title.'&';?>page={$page + 1}&page_row={$page_row}">{$page + 1}</a>-->
+        <!--</div>-->
+    <!--</for>-->
+    <div class="page_turn" id="next">
+        <a href="/Admin/Article/datalist?<?php if($title) echo "title=".$title.'&';?>page=<?php if($nowPage + 1 > $total_page) echo $total_page;else echo $nowPage + 1;?>&page_row={$page_row}">>></a>
+    </div>
+    <div class="page_turn" id="next_row">
+        <a href="/Admin/Article/datalist?<?php if($title) echo "title=".$title.'&';?>page={$total_page}&page_row={$page_row}">>></a>
+    </div>
+    <a class="page_turn" href="/Admin/Article/datalist?<?php if($title) echo "title=".$title.'&';?>page_row=2">2</a>
+    <a class="page_turn" href="/Admin/Article/datalist?<?php if($title) echo "title=".$title.'&';?>page_row=4">4</a>
+</div>
+<script>
+    // 标题搜索
+    $("#submit").click(function () {
+        var title = $("#search").val()
+        window.location.href = "/Admin/Article/datalist?title=" + title
+    })
+
+    // 文章删除
+    $(".delete").click(function () {
+        var id = $(this).attr("data-id");
+        $.post("/Admin/Article/doDelete", {
+            id:id
+        }, function (result) {
+            console.log(result)
+            alert(result.message)
+            if (result.status == 1) {
+                window.location.reload()
+            }
+        }, "json")
+    })
+
+    // 添加文章
+    $("#article_add").click(function () {
+        window.location.href = "/Admin/Article/add"
+    })
+
+    // 返回首页
+    $("#location_datalist").click(function () {
+        window.location.href = "/Admin/Article/datalist"
+    })
+
+</script>
+<include file="./Application/Admin/View/Public/footer.html" />

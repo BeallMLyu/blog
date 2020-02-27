@@ -1,0 +1,175 @@
+<title>没头没脑的随记</title>
+    <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.js"></script>
+    <style>
+        body{
+            background: lightcyan;
+        }
+
+        /*功能*/
+        /*#search{*/
+            /*border: 1px solid #c0c0c0;*/
+            /*border-radius: 4px;*/
+            /*font-size: 1em;*/
+            /*width: 300px;*/
+            /*height: 40px;*/
+            /*float: left;*/
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*left: 37%;*/
+        /*}*/
+
+        /*.submit{*/
+            /*float: left;*/
+            /*height: 42px;*/
+            /*width: 80px;*/
+            /*line-height: 40px;*/
+            /*border-radius: 4px;*/
+            /*color: #ffffff;*/
+            /*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);*/
+            /*background-color: #006dcc;*/
+            /*cursor:pointer;*/
+            /*text-align: center;*/
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*left: 53.5%;*/
+        /*}*/
+
+        /*类别表格*/
+        table th, table td{
+            text-align: center;
+            width: 170px;
+            background: white;
+            padding: 0 0;
+        }
+        table th{
+            font-size: 30px;
+            color: green;
+            background: yellowgreen;
+        }
+        table td{
+            font-size: 20px;
+        }
+        .table{
+            background: white;
+            position: fixed;
+            top: 45%;
+            left: 92%;
+        }
+
+        /*文章*/
+        .datalist{
+            background: lightcyan;
+            width: 1245px;
+            height: 260px;
+            font-size: 35px;
+            /*border: 2px solid black;*/
+        }
+        .data_top{
+            position: absolute;
+            top: 50px;
+            left: 500px;
+        }
+        .content{
+            font-size: 20px;
+            left: 50px;
+            position: relative;
+            top: 10px;
+            max-width: 1140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            white-space: pre-line;
+            /*border: 2px solid black;*/
+        }
+
+        /*翻页*/
+        .page{
+            float:left;
+            margin: 0 50px;
+            border: 1px;
+            border-radius: 15px;
+            width: 150px;
+            height: 50px;
+            background: #232323;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            color: white;
+        }
+        .page_top{
+            position: absolute;
+            top: 1400px;
+            left: 37%;
+            margin: 20px 0 40px 0;
+        }
+
+
+    </style>
+    <!--侧面菜单-->
+    <include file="./Application/Home/View/Public/header.html" />
+    <include file="./Application/Home/View/Public/menu.html" />
+
+    <!--<div>-->
+        <!--<input id="search" type="text" placeholder="please enter about the title" value="<?php if($title) echo $title;?>">-->
+        <!--<br/>-->
+        <!--<div id="submit" class="submit">submit</div>-->
+    <!--</div>-->
+    <div class="data_top">
+        <foreach name="blog" item="item">
+            <div class="datalist">
+                <a style="font-size:50px;left: 50px;position: relative" href="/Home/index/content?id={$item['id']}">{$item['title']}</a>
+                <div style="font-size: 20px;position: relative;left: 50px;top: 3px">
+                    类别:<a style="font-size: 20px;" title="{$item['cate_name']}" href="/Home/Index/index?cate_id={$item['cate_id']}">{$item['cate_name']}</a>
+                    <div style="font-size: 20px;position: relative;float: right;right: 800px;">
+                        发表时间:<a style="font-size: 20px;">{$item['create_time']}</a>
+                    </div>
+                </div>
+                <div class="content">{$item['content']}</div>
+            </div>
+            <div style="background:#006dcc;border-radius: 10px;width: 150px;;height: 50px;text-align: center;line-height: 50px;font-size: 25px;position: relative;left: 50px;margin: 0 0 30px 0">
+                <a style="color: white" href="/Home/index/content?id={$item['id']}">查看全文</a>
+            </div>
+        </foreach>
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>类别</th>
+            </tr>
+            <volist name="cate" id="vo">
+                <tr>
+                    <td>
+                        <a href="/Home/Index/index?cate_id={$vo['id']}" title="{$vo['cate_name']}">{$vo['cate_name']}</a>({$vo['count']})
+                    </td>
+                </tr>
+            </volist>
+        </table>
+    </div>
+<div class="page_top">
+    <div class="page">
+        <a style="color: white" href="/Home/Index/index?<?php if($title) echo "title=".$title.'&';?>cate_id={$cate_id}&page=1"><<</a>
+    </div>
+    <div class="page">
+        <a style="color: white" href="/Home/Index/index?<?php if($title) echo "title=".$title.'&';?>cate_id={$cate_id}&page=<?php if($nowPage - 1 < 1) echo 1;else echo $nowPage - 1;?>"><</a>
+    </div>
+    <!--<for start="0" end="$totalPage" step="1" name="page">-->
+        <!--<div class="page">-->
+            <!--<a style="color: white" href="/Home/Index/index?<?php if($title) echo "title=".$title.'&';?>page={$page + 1}">{$page + 1}</a>-->
+        <!--</div>-->
+    <!--</for>-->
+    <div class="page">
+        <a style="color: white" href="/Home/Index/index?<?php if($title) echo "title=".$title.'&';?>cate_id={$cate_id}&page=<?php if($nowPage + 1 > $totalPage) echo $totalPage;else echo $nowPage + 1;?>">></a>
+    </div>
+    <div class="page">
+        <a style="color: white" href="/Home/Index/index?<?php if($title) echo "title=".$title.'&';?>cate_id={$cate_id}&page={$totalPage}">>></a>
+    </div>
+</div>
+<script>
+    // $("#submit").click(function () {
+    //     var title = $("#search").val()
+    //     window.location.href = "/Home/index/index?title=" + title
+    // })
+</script>
+<include file="./Application/Home/View/Public/footer.html" />

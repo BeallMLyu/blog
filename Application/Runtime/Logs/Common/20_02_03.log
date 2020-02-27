@@ -1,0 +1,20 @@
+[ 2020-02-03T22:31:18+08:00 ] 127.0.0.1 /Home/Index/%E2%80%AAC:/Users/ASUS/Desktop/download20200104153704.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002117s ]
+
+[ 2020-02-03T22:31:29+08:00 ] 127.0.0.1 /Desktop/download20200104153704.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+
+[ 2020-02-03T22:31:50+08:00 ] 127.0.0.1 /Home/Index/ASUS/Desktop/download20200104153704.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+
+[ 2020-02-03T22:31:55+08:00 ] 127.0.0.1 /ASUS/Desktop/download20200104153704.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+

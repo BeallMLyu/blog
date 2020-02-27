@@ -1,0 +1,50 @@
+<title>账户信息</title>
+
+<!--侧面菜单-->
+<include file="./Application/Admin/View/Public/header.html" />
+<include file="./Application/Admin/View/Public/menu.html" />
+
+<style>
+    .account_class{
+        background-color: #fff;
+        border-radius: 20px;
+        width: 1500px;
+        height: 90px;
+        margin: 20% 18%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    table th, table td{
+        top: 100px;
+        padding: 5px 40px;
+        text-align: center;
+        border: 1px solid silver;
+    }
+    table th{
+        background: #999999;
+    }
+</style>
+<table class="account_class">
+    <tr>
+        <th>用户名</th>
+        <th>创建时间</th>
+        <th>最后登录时间</th>
+        <th>最后登录IP</th>
+        <th>域名</th>
+        <th>PHP版本</th>
+        <th>MySql版本</th>
+    </tr>
+    <tr>
+        <td>{$users['username']}</td>
+        <td>{$users['create_time']}</td>
+        <td>{$users['last_login_time']}</td>
+        <td>{$users['last_login_ip']}</td>
+        <td>{$system['domain']}</td>
+        <td>{$system['php_version']}</td>
+        <td>{$system['mysql_version']}</td>
+    </tr>
+</table>
+<include file="./Application/Admin/View/Public/footer.html" />
